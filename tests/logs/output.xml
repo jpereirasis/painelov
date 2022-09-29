@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220928 07:20:55.597" rpa="false" schemaversion="3">
+<suite id="s1" name="Register" source="C:\Users\jspereira\OneDrive - SIS Consultoria de Informática Ltda\OVSI\automacao_ovsi\tests\features\register.robot">
+<test id="s1-t1" name="Caso de Teste 04 - Adicionar Cliente" line="13">
+<kw name="Abrir Navegador" library="hooks" type="SETUP">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220928 07:20:55.884" endtime="20220928 07:20:55.885"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220928 07:20:55.885" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220928 07:20:55.885" endtime="20220928 07:20:57.134"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220928 07:20:57.134" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20220928 07:20:57.134" endtime="20220928 07:21:01.954"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220928 07:21:01.954" endtime="20220928 07:21:02.084"/>
+</kw>
+<status status="PASS" starttime="20220928 07:20:55.884" endtime="20220928 07:21:02.086"/>
+</kw>
+<kw name="Acessar a página home do site" library="kws_register">
+<kw name="Acessar a página home do site Automation Pratice" library="kws_search">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME_PAGE.title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220928 07:21:02.101" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20220928 07:21:02.089" endtime="20220928 07:21:02.102"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HOME_PAGE.input_busca}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 07:21:02.102" endtime="20220928 07:21:02.157"/>
+</kw>
+<status status="PASS" starttime="20220928 07:21:02.088" endtime="20220928 07:21:02.157"/>
+</kw>
+<status status="PASS" starttime="20220928 07:21:02.086" endtime="20220928 07:21:02.157"/>
+</kw>
+<kw name="Clicar em &quot;Sign in&quot;" library="kws_register" sourcename="Clicar em &quot;${BUTTON}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${BUTTON}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 07:21:02.158" endtime="20220928 07:21:02.186"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${BUTTON}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 07:21:02.187" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Sign in')]'.</msg>
+<status status="PASS" starttime="20220928 07:21:02.186" endtime="20220928 07:21:05.382"/>
+</kw>
+<status status="PASS" starttime="20220928 07:21:02.158" endtime="20220928 07:21:05.383"/>
+</kw>
+<kw name="Informar um e-mail válido" library="kws_register">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>email_create</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 07:21:05.384" endtime="20220928 07:21:05.409"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>email_create</arg>
+<arg>jonas.pereira@robot.com.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220928 07:21:05.409" level="INFO">Typing text 'jonas.pereira@robot.com.br' into text field 'email_create'.</msg>
+<status status="PASS" starttime="20220928 07:21:05.409" endtime="20220928 07:21:05.499"/>
+</kw>
+<status status="PASS" starttime="20220928 07:21:05.384" endtime="20220928 07:21:05.499"/>
+</kw>
+<kw name="Clicar em &quot;Create an account&quot;" library="kws_register" sourcename="Clicar em &quot;${BUTTON}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${BUTTON}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220928 07:21:05.500" endtime="20220928 07:21:05.518"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${BUTTON}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220928 07:21:05.519" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Create an account')]'.</msg>
+<status status="PASS" starttime="20220928 07:21:05.519" endtime="20220928 07:21:05.565"/>
+</kw>
+<status status="PASS" starttime="20220928 07:21:05.500" endtime="20220928 07:21:05.565"/>
+</kw>
+<kw name="Preencher os dados obrigatórios" library="kws_register">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${REGISTER.form_register}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220928 07:21:25.996" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220928 07:21:25.997" level="FAIL">Element 'account-creation_form' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220928 07:21:05.566" endtime="20220928 07:21:25.999"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER.check_mr}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:25.999" endtime="20220928 07:21:25.999"/>
+</kw>
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:25.999" endtime="20220928 07:21:25.999"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.first_name}</arg>
+<arg>Jonas</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:25.999" endtime="20220928 07:21:25.999"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.last_name}</arg>
+<arg>Pereira</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:25.999" endtime="20220928 07:21:25.999"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.password}</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:25.999" endtime="20220928 07:21:26.000"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.check_mr}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.000" endtime="20220928 07:21:26.000"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.check_mr}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.000" endtime="20220928 07:21:26.000"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.check_mr}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.000" endtime="20220928 07:21:26.000"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.address_name}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.001" endtime="20220928 07:21:26.001"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.address_lastname}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.001" endtime="20220928 07:21:26.001"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.company}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.001" endtime="20220928 07:21:26.001"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.address1}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.001" endtime="20220928 07:21:26.001"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.city}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.002" endtime="20220928 07:21:26.002"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.state}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.002" endtime="20220928 07:21:26.002"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.postcode}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.002" endtime="20220928 07:21:26.002"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.other}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.002" endtime="20220928 07:21:26.003"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.mobile}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.003" endtime="20220928 07:21:26.004"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${REGISTER.alias}</arg>
+<arg>text</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.004" endtime="20220928 07:21:26.004"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.004" endtime="20220928 07:21:26.004"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER.btn_register}</arg>
+<arg>text</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220928 07:21:26.004" endtime="20220928 07:21:26.004"/>
+</kw>
+<status status="FAIL" starttime="20220928 07:21:05.565" endtime="20220928 07:21:26.005"/>
+</kw>
+<kw name="Submeter cadastro" library="kws_register">
+<status status="NOT RUN" starttime="20220928 07:21:26.006" endtime="20220928 07:21:26.006"/>
+</kw>
+<kw name="Conferir se o cadastro doi efetuado com sucesso" library="kws_register">
+<status status="NOT RUN" starttime="20220928 07:21:26.006" endtime="20220928 07:21:26.006"/>
+</kw>
+<kw name="Fechar Navegador" library="hooks" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220928 07:21:26.147" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220928 07:21:26.008" endtime="20220928 07:21:26.147"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220928 07:21:29.162" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220928 07:21:26.147" endtime="20220928 07:21:29.162"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220928 07:21:29.162" endtime="20220928 07:21:31.339"/>
+</kw>
+<status status="PASS" starttime="20220928 07:21:26.007" endtime="20220928 07:21:31.340"/>
+</kw>
+<tag>CADASTRO</tag>
+<status status="FAIL" starttime="20220928 07:20:55.883" endtime="20220928 07:21:31.341">Element 'account-creation_form' not visible after 5 seconds.</status>
+</test>
+<doc>"Aqui estará presente todos os testes automatizados com suas keywords - Exercicios"</doc>
+<status status="FAIL" starttime="20220928 07:20:55.599" endtime="20220928 07:21:31.344"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">CADASTRO</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
